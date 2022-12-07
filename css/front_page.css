@@ -1,0 +1,23 @@
+::before::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 300%;
+    height: 50vh;
+}
+body {
+    display: grid;
+}
+.add {
+    display: inline-block;
+    position: relative;
+    left: 200px;
+    margin: 150px;
+}
+.table {
+    display: inline-block;
+    position: relative;
+    letter-spacing: 3px;
+    bottom: 100px;
+    left: 200px;
+}
