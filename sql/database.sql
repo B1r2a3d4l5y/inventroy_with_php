@@ -1,6 +1,5 @@
 CREATE TABLE IF NOT EXISTS tasks(
-    id INT(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    task VARCHAR(250) NOT NULL,
-    iscomplete BIT NOT NULL, 
-
-)
+    task_id INT(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    task_description VARCHAR(250)  NOT NULL,
+    status VARCHAR(10) NOT NULL
+    );

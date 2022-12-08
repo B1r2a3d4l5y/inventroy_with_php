@@ -6,18 +6,24 @@
     height: 50vh;
 }
 body {
-    display: grid;
+    background-color: blue
 }
 .add {
     display: inline-block;
     position: relative;
-    left: 200px;
-    margin: 150px;
+    margin: 45px;
+    left: 150px ;
+}
+.task {
+    display: inline-block;
+    position: relative;
+    width: 200px
+
 }
 .table {
     display: inline-block;
     position: relative;
-    letter-spacing: 3px;
-    bottom: 100px;
-    left: 200px;
+    letter-spacing: 1px;
+    margin: 100px;
+    
 }
