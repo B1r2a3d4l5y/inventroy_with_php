@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS tasks(
-    task_id INT(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    task_description VARCHAR(250)  NOT NULL,
-    status VARCHAR(10) NOT NULL
-    );
+CREATE TABLE IF NOT EXISTS products(
+product_name VARCHAR(200) NOT NULL,
+product_price INT(20) NOT NULL,
+quanity INT(20) NOT NULL
+);

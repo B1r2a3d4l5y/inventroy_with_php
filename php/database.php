@@ -2,7 +2,7 @@
 $dbservername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbName = "todos";
+$dbName = "inventroy";
 
 # create connection to database 
 $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbName);
@@ -11,6 +11,5 @@ if($conn->connect_error) {
     die("connection error".$conn->connect_error);
 
 }
-die("connected successfully");
-$conn->close()
+$conn->close();
 

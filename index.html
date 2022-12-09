@@ -10,23 +10,25 @@
         <link rel="stylesheet" href="css/front_page.css">
 
 
-    <title>Todolist with php</title>
+    <title>inventroy system</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/database.php" method="POST" id="myform">
+            <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/add.php" method="post" id="myform">
                 <input type="text" class="productname" name="productname" placeholder="Enter product name">
                 <input type="text" name="productprice" class="productprice" placeholder="Enter price">
-                <input type="number" name="quantiy" class="quanity">
-               <button type="submit" class="add btn btn-success" name="add">Add new todo</button>
-                <table class="table table">
+                <input type="number" name="quantiy" class="quanity" placeholder="Quanity">
+               <button type="submit" class="add btn btn-success" name="add">Add new item</button>
+                <table class="table ">
                     <thead>
                         <tr>
                             
                             <th>Product Name</th>
                             <th>Product Price</th>
                             <th>Quanity</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
 
