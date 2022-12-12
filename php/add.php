@@ -1,41 +1,31 @@
 <?php
 // errors global
-  $errors = "";
+   $emptyError="";  $productnameEror = "" ; $product_priceError = ""; $quanityError = "";
   if(isset($_POST['add'])) {
     include 'database.php';
-    $product_name = $_POST['product_name'];
+    $product_name = $_POST['productname'];
     $product_price = $_POST['productprice'];
-    $quanity = $_post['quanity'];
+    $quanity = $_POST['quanity'];
 
-    if(empty($product_name)|| empty($product_price)|| empty($quanity)) {
-        $errors = "Fields are empty please fill them out";
-        header("Location:../index.html?inventroy=empty");
+    if(empty($product_name)|| empty($product_price)|| empty($quanity)){
+      $emptyError = "Fields are empty. Please fill them in";
+      header("Location:./index.html?inventroy=empty");  
+     }  elseif(!is_numeric($product_price)){
+        $product_priceError = "Price field must contain numbers only";
+        header("Location:../index.html?inventroy=priceinvalidchar");
 
+      } elseif(!is_numeric($quanity)){
+          $quanityError = "Quanity field must contain numbers only";
+          header("Location:../index.html?inventroy=quanityinvalidchar");
 
-    } else {
-        if(empty($product_name)){
-            $errors = "please enter the products name";
 
         } else {
-            if(empty($product_price)) {
-                $errors = "Please enter price for product";
-                header("Location:../index.html?invetroy=productpriceEmpty");
-            } else {
-                if(empty($quanity)) {
-                    $errors = "please enter a quanity";
-                } else {
-                    $sql = "INSERT INTO products(product_name, product_price, quanity) VALUES(?,?,?)";
-                    if($conn->query($sql) === false) {
-                        echo "SQL error" .$sql ."<br>" .$conn->error ;
-
-                    } else {
-                        echo "New record created suceessfully";
-                    }
-
-                }
-            }
-
+          $stmt = $conn->prepare("INSERT INTO prodcuts(Product_name, product_price, quanity)VALUES(?,?,?);");
+          $stmt->bind_param("sss", $product_name, $product_price, $quanity);
+          
         }
-    }
-  }
-  $conn->close();
+      }
+      $stmt->excute();
+      
+    
+  

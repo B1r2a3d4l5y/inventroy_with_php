@@ -16,10 +16,14 @@
     <div class="container-fluid">
         <div class="row">
             <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/add.php" method="post" id="myform">
-                <input type="text" class="productname" name="productname" placeholder="Enter product name">
-                <input type="text" name="productprice" class="productprice" placeholder="Enter price">
-                <input type="number" name="quantiy" class="quanity" placeholder="Quanity">
-               <button type="submit" class="add btn btn-success" name="add">Add new item</button>
+                <label for="form_input" class="form_input">
+                    <input type="text" class="productname" name="productname" placeholder="Enter product name">
+                    <input type="text" name="productprice" class="productprice" placeholder="Enter price">
+                    <input type="text" name="quanity" class="quanity" placeholder="Enter  a quanity amount">
+                    <button type="submit" class="add btn btn-success" name="add">Add new product</button>
+
+                </label>
+              
                 <table class="table ">
                     <thead>
                         <tr>
@@ -38,6 +42,7 @@
 
                     </tbody>
                 </table>
+                    
 
             </form>
         </div>
