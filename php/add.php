@@ -27,7 +27,7 @@
           die("SQL error") ;
          } else {
           mysqli_stmt_bind_param($stmt, "sss", $product_name, $product_price, $quanity);
-          mysqli_stmt_excute($stmt)
+          mysqli_stmt_excute($stmt);
          }
           
         }
