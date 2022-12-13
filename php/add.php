@@ -2,7 +2,7 @@
 // errors global
    $emptyError="";  $productnameEror = "" ; $product_priceError = ""; $quanityError = "";
   if(isset($_POST['add'])) {
-    include 'database.php';
+    require 'database.php';
     $product_name = $_POST['productname'];
     $product_price = $_POST['productprice'];
     $quanity = $_POST['quanity'];
@@ -20,12 +20,19 @@
 
 
         } else {
-          $stmt = $conn->prepare("INSERT INTO prodcuts(Product_name, product_price, quanity)VALUES(?,?,?);");
-          $stmt->bind_param("sss", $product_name, $product_price, $quanity);
+          $sql = "INSERT INTO products(product_name, product_price, quanity) VALUES(?,?,?);";
+         stmt = mysqli_stmt_init($conn);
+         //check sql errors
+         if(!mysqli_stmt_prepare($stmt, $sql)) {
+          die("SQL error") ;
+         } else {
+          mysqli_stmt_bind_param($stmt, "sss", $product_name, $product_price, $quanity);
+          mysqli_stmt_excute($stmt)
+         }
           
         }
-      }
-      $stmt->excute();
+  }
+  $conn->close();
       
     
   
