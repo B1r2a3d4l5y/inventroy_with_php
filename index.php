@@ -46,9 +46,10 @@
                             echo "<td>" . $row["product_name"] . "</td>";
                             echo "<td>". $row["product_price"] . "</td>";
                             echo "<td>". $row["quanity"] . "</td>";
-                            echo "<td><a href='edit' role='button' class=' edit btn-info btn-sm '>Edit</a>" .$row["edit"] . "</td>";
-                            echo "<td><a hrf='delete' role='button' class=''delete btn btn-danger btn-sm'>Delete</a>".  $row["delete"] . "</td>";
-                            echo "</tr>";
+                            echo "<td>
+                            <a class='edit btn btn-info btn-sm' href='edit'>Edit</a></td>";
+                            echo "<td><a class='delete btn btn-danger btn-sm'>Delete</a>" . "</td>";
+                        
 
 
 

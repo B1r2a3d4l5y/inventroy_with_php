@@ -6,19 +6,14 @@
     height: 50vh;
 }
 body {
-    background-color: blue
+    background-color: white;
 }
+
 .add {
     display: inline-block;
     position: relative;
     margin: 45px;
     left: 150px ;
-}
-.viewBtn {
-    display: inline-block;
-    position: absolute;
-    
-
 }
 
 
