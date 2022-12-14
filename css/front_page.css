@@ -14,12 +14,14 @@ body {
     margin: 45px;
     left: 150px ;
 }
-.task {
+.viewBtn {
     display: inline-block;
-    position: relative;
-    width: 200px
+    position: absolute;
+    
 
 }
+
+
 .table {
     display: inline-block;
     position: relative;
