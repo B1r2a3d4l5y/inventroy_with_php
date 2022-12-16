@@ -20,7 +20,7 @@
 
 
         } else {
-          $sql = "INSERT INTO products(product_name, product_price, quanity) VALUES(?,?,?);";
+          $sql = "INSERT INTO products(  product_name, product_price, quanity) VALUES(?,?,?);";
          $stmt = mysqli_stmt_init($conn);
          //check sql errors
          if(!mysqli_stmt_prepare($stmt, $sql)) {

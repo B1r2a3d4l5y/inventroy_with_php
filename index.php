@@ -16,18 +16,25 @@
     <div class="container-fluid">
         <div class="row">
             <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/add.php" method="post" id="myform">
-                <label for="form_input" class="form_input">
+                <label for="product name" class="form_input">
                     <input type="text" class="productname" name="productname" placeholder="Enter product name">
-                    <input type="text" name="productprice" class="productprice" placeholder="Enter price">
-                    <input type="text" name="quanity" class="quanity" placeholder="Enter  a quanity amount">
-                    <button type="submit" class="add btn btn-success" name="add">Add new product</button>
+                   
+                 
 
                 </label>
+                <label for="product price">
+                     <input type="text" name="productprice" class="productprice" placeholder="Enter price">
+                </label>
+                <label for="quanity">
+                      <input type="text" name="quanity" class="quanity" placeholder="Enter  a quanity amount">
+
+                </label>
+                  <button type="submit" class="add btn btn-success" name="add">Add new product</button>
               
                 <table class="table ">
                     <thead>
                         <tr>
-                            
+                            <th>ID</th>
                             <th>Product Name</th>
                             <th>Product Price</th>
                             <th>Quanity</th>
@@ -43,12 +50,13 @@
                         $result  = $conn->query("SELECT * FROM products;");
                         while($row = mysqli_fetch_array($result) ) {
                             echo "<tr>";
+                            echo "<td>".$row["id"]. "</td>";
                             echo "<td>" . $row["product_name"] . "</td>";
                             echo "<td>". $row["product_price"] . "</td>";
                             echo "<td>". $row["quanity"] . "</td>";
                             echo "<td>
-                            <a class='edit btn btn-info btn-sm' href='edit'>Edit</a></td>";
-                            echo "<td><a class='delete btn btn-danger btn-sm'>Delete</a>" . "</td>";
+                            <a  class='edit btn btn-info btn-sm'  name='edit' href='php/update.php'>Edit</a></td>";
+                            echo "<td><a class='delete btn btn-danger btn-sm' href='php/delete.php'>Delete</a>" . "</td>" ;
                         
 
 
