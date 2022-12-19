@@ -56,7 +56,7 @@
                             echo "<td>". $row["quanity"] . "</td>";
                             echo "<td>
                             <a  class='edit btn btn-info btn-sm'  name='edit' href='php/update.php'>Edit</a></td>";
-                            echo "<td><a class='delete btn btn-danger btn-sm' href='php/delete.php'>Delete</a>" . "</td>" ;
+                            echo "<td><a href='delete.php?id=$row['id'];>Delete</a>". "</td"> ;
                         
 
 
