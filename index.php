@@ -50,17 +50,18 @@
                         $result  = $conn->query("SELECT * FROM products;");
                         while($row = mysqli_fetch_array($result) ) {
                             echo "<tr>";
-                            echo "<td>".$row["id"]. "</td>";
-                            echo "<td>" . $row["product_name"] . "</td>";
-                            echo "<td>". $row["product_price"] . "</td>";
-                            echo "<td>". $row["quanity"] . "</td>";
+                            echo "<td>".$row['id']. "</td>";
+                            echo "<td>" . $row['product_name'] . "</td>";
+                            echo "<td>". $row['product_price'] . "</td>";
+                            echo "<td>". $row['quanity'] . "</td>";
                             echo "<td>
                             <a  class='edit btn btn-info btn-sm'  name='edit' href='php/update.php'>Edit</a></td>";
-                            echo "<td><a href='delete.php?id=$row['id'];>Delete</a>". "</td"> ;
+                            echo "<td><a href='php/delete.php' name='delete'   class='delete  btn btn-danger btn-sm'>Delate</a></td> " ;
                         
 
 
 
+                            
                         }
                         ?>
                         

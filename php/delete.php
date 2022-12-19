@@ -1,10 +1,14 @@
 <?php
-if(isset($_GET['id'])) {
+if(isset($_POST['delete']) ) {
     include 'database.php';
-    $id = $_GET['id'];
-    $query = $conn->query("DELETE FROM products WHERE id=$id");
-    echo "<font color='green> Record deleted from database '"
+    $id = $_POST['id'];
+    $query = "DELETE FROM products WHERE id=$id";
+    if($conn->query($sql)=== False) {
+        echo "<font color=red>Record failed to delete ".$conn->error;
 
-} else {
-    echo "<font color='red '>Failed to delete record"
+    } else {
+        echo "<font color='grreen'> Record was successfully deleted";
+
+    }
 }
+$conn->close();
