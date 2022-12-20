@@ -25,3 +25,9 @@ body {
     width: 75%;
     
 }
+.pagination{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    left: 60px;
+}

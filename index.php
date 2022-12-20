@@ -77,18 +77,22 @@
 
                         
 
-                    </tbody>
-                    <tfoot class="table_footer">
-                        <ul class="pagination">
-                            <li class="page_item"><a  href="#" class="page_link">Previous</a></li>
-                            <li class="page_item"><a href="#" class="page_link">1</a></li>
-                            <li class="page_item"><a href="#" class="page_link">Next</a></li>
-                            <ul>
-
-
-                    </tfoot>
-                    
+               
                 </table>
+               
+                  
+                        <div class="col-lg-6 col-md-6 colsm-12 col-xs-12">
+                            <div class= "row">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a><li>
+                                        <li class="page-item"><a class="page-link">Next</a><li>
+                                </ul>
+
+                            </div>
+                        </div>
+                 
+            
                     
 
             </form>
