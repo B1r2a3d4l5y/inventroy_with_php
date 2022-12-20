@@ -54,9 +54,8 @@
                             echo "<td>" . $row['product_name'] . "</td>";
                             echo "<td>". $row['product_price'] . "</td>";
                             echo "<td>". $row['quanity'] . "</td>";
-                            echo "<td>
-                            <a  class='edit btn btn-info btn-sm'  name='edit' href='php/update.php'>Edit</a></td>";
-                            echo "<td><a href='php/delete.php' name='delete'   class='delete  btn btn-danger btn-sm'>Delate</a></td> " ;
+                            echo "<td><a href='php/update.php' class='edit btn btn btn-info btn-sm'/a>Edit</td>";
+                            echo "<td><a class='btn btn-danger btn-sm' href='php/delete.php?id=".$row['id']. "'>Delete</a></td>";
                         
 
 
@@ -64,6 +63,7 @@
                             
                         }
                         ?>
+
                         
                         
                         
@@ -78,6 +78,16 @@
                         
 
                     </tbody>
+                    <tfoot class="table_footer">
+                        <ul class="pagination">
+                            <li class="page_item"><a  href="#" class="page_link">Previous</a></li>
+                            <li class="page_item"><a href="#" class="page_link">1</a></li>
+                            <li class="page_item"><a href="#" class="page_link">Next</a></li>
+                            <ul>
+
+
+                    </tfoot>
+                    
                 </table>
                     
 
