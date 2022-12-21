@@ -1,39 +1,22 @@
 <?php
-// errors global
-   $emptyError="";  $productnameEror = "" ; $product_priceError = ""; $quanityError = "";
-  if(isset($_POST['add'])) {
-    require 'database.php';
-    $product_name = $_POST['productname'];
-    $product_price = $_POST['productprice'];
-    $quanity = $_POST['quanity'];
+if (isset($_POST["new"])) {
+  include 'database.php';
+  $equipment_id = $_POST["id"];
+  $equipment_name = $_POST["equipmentname"];
+  $equipment_price = $_POST["equipmentprice"];
+  $quanity = $_POST["quanity"];
+  $brand = $_POST["brand"];
+  $date_added = $_POST["date"];
+  $condition = $_POST["condition"];
 
-    if(empty($product_name)|| empty($product_price)|| empty($quanity)){
-      $emptyError = "Fields are empty. Please fill them in";
-      header("Location:./index.php?inventroyempty");  
-     }  elseif(!is_numeric($product_price)){
-        $product_priceError = "Price field must contain numbers only";
-        header("Location:../index.php?inventroypriceinvalidchar");
-
-      } elseif(!is_numeric($quanity)){
-          $quanityError = "Quanity field must contain numbers only";
-          header("Location:../index.php?inventroyquanityinvalidchar");
+  if(empty($equipment_id) || empty($equipment) || $equipment_price || empty($quanity) || empty($brand) || empty($date_addedd)  || empty($condition) ) {
+    die("Fields are empty. Please fill them in ");
+    header("Location:../index.php?inventry=emptyfields");
+  } 
 
 
-        } else {
-          $sql = "INSERT INTO products(  product_name, product_price, quanity) VALUES(?,?,?);";
-         $stmt = mysqli_stmt_init($conn);
-         //check sql errors
-         if(!mysqli_stmt_prepare($stmt, $sql)) {
-          die("SQL error") ;
-         } else {
-          mysqli_stmt_bind_param($stmt, "sss", $product_name, $product_price, $quanity);
-          mysqli_stmt_execute($stmt);
-         }
-          
-        }
-  }
-  header("Location:../index.php");
-  $conn->close();
-      
+  
+
+}
     
   

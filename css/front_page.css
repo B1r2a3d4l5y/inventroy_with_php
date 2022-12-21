@@ -23,11 +23,7 @@ body {
     letter-spacing: 1px;
     margin: 100px;
     width: 75%;
+    padding: 10px;
     
 }
-.pagination{
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    left: 60px;
-}
+

@@ -16,28 +16,43 @@
     <div class="container-fluid">
         <div class="row">
             <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/add.php" method="post" id="myform">
-                <label for="product name" class="form_input">
-                    <input type="text" class="productname" name="productname" placeholder="Enter product name">
+                <label for="id">
+                    <input type="text" class="id" name="id" placeholder="Enter product id">;
+                </label>
+                <label for="equipment name" class="form_input">
+                    <input type="text" class="equipmentname" name="productname" placeholder="Enter equipment name">
                    
                  
 
                 </label>
-                <label for="product price">
-                     <input type="text" name="productprice" class="productprice" placeholder="Enter price">
+                <label for="equipment price">
+                     <input type="text" name="equipmentprice" class="equipmentprice" placeholder="Enter price">
                 </label>
                 <label for="quanity">
-                      <input type="text" name="quanity" class="quanity" placeholder="Enter  a quanity amount">
+                      <input type="text" name="quanity" class="quanity" placeholder="Quanity">
 
                 </label>
-                  <button type="submit" class="add btn btn-success" name="add">Add new product</button>
+                <lael for="brand">
+                    <input type="text" class="brand" name="brand" placeholder="Enter brand name">
+                </label>
+                <label for="date added">
+                    <input type="date" name="date" >
+                </label>
+                <label for="condition">
+                    <input type="text" name="condition" placeholder="Enter  condition of product">
+                </label>
+                  <button type="submit" class="add btn btn-success" name="new">New </button>
               
-                <table class="table ">
+                <table class="table table-bordered ">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Product Price</th>
+                            <th>Equipment name</th>
+                            <th>Equipment Price</th>
                             <th>Quanity</th>
+                            <th>Brand</th>
+                            <th>Date added</th>
+                            <th>Condition</th>
                             <th>Edit</th>
                             <th>Delete</th>
 
@@ -47,7 +62,7 @@
                     <tbody>
                         <?php
                         include 'php/database.php';
-                        $result  = $conn->query("SELECT * FROM products;");
+                        $result  = $conn->query("SELECT * FROM equipment;");
                         while($row = mysqli_fetch_array($result) ) {
                             echo "<tr>";
                             echo "<td>".$row['id']. "</td>";
@@ -83,11 +98,11 @@
                   
                         <div class="col-lg-6 col-md-6 colsm-12 col-xs-12">
                             <div class= "row">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a><li>
-                                        <li class="page-item"><a class="page-link">Next</a><li>
-                                </ul>
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link">Next</a></li>
+                            </ul>
 
                             </div>
                         </div>
