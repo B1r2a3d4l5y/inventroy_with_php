@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form {
+    display: inline-block;
+    position: relative;
+    width: 300%;
+
+}
+.form_input{
+    display: inline-block;
+    position: relative;
+    margin: 60px;
+    padding: 10px;
+
+
+}

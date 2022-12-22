@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 300%;
-    height: 50vh;
 }
 body {
     background-color: white;
+}
+.form {
+    display: inline-block;
+    position: relative;
+
 }
 
 .add {
@@ -20,10 +23,9 @@ body {
 .table {
     display: inline-block;
     position: relative;
-    letter-spacing: 1px;
     margin: 100px;
     width: 75%;
-    padding: 10px;
+    
     
 }
 

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/front_page.css">
 
 
@@ -15,33 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12" action="php/add.php" method="post" id="myform">
-                <label for="id">
-                    <input type="text" class="id" name="id" placeholder="Enter product id">;
-                </label>
-                <label for="equipment name" class="form_input">
-                    <input type="text" class="equipmentname" name="productname" placeholder="Enter equipment name">
-                   
-                 
-
-                </label>
-                <label for="equipment price">
-                     <input type="text" name="equipmentprice" class="equipmentprice" placeholder="Enter price">
-                </label>
-                <label for="quanity">
-                      <input type="text" name="quanity" class="quanity" placeholder="Quanity">
-
-                </label>
-                <lael for="brand">
-                    <input type="text" class="brand" name="brand" placeholder="Enter brand name">
-                </label>
-                <label for="date added">
-                    <input type="date" name="date" >
-                </label>
-                <label for="condition">
-                    <input type="text" name="condition" placeholder="Enter  condition of product">
-                </label>
-                  <button type="submit" class="add btn btn-success" name="new">New </button>
+             <a  class="add btn btn-success"  href="add_item.php" >New </a>
               
                 <table class="table table-bordered ">
                     <thead>
@@ -66,9 +39,12 @@
                         while($row = mysqli_fetch_array($result) ) {
                             echo "<tr>";
                             echo "<td>".$row['id']. "</td>";
-                            echo "<td>" . $row['product_name'] . "</td>";
-                            echo "<td>". $row['product_price'] . "</td>";
+                            echo "<td>" . $row['equipmentname'] . "</td>";
+                            echo "<td>". $row['equipmentprice'] . "</td>";
                             echo "<td>". $row['quanity'] . "</td>";
+                            echo "<td>" .$row['brand'] . "</td>";
+                            echo "<td>". $row['date'] . "</td>";
+                            echo "<td>". $row['condition'] . "</td>";
                             echo "<td><a href='php/update.php' class='edit btn btn btn-info btn-sm'/a>Edit</td>";
                             echo "<td><a class='btn btn-danger btn-sm' href='php/delete.php?id=".$row['id']. "'>Delete</a></td>";
                         
@@ -117,3 +93,7 @@
     
 </body>
 </html>
+
+        </div>
+        
+                 
