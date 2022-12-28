@@ -2,7 +2,7 @@
 $dbservername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbName = "inventroy";
+$dbName = "inventroy_system";
 
 # create connection to database 
 $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbName);

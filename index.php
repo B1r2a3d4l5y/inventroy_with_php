@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-             <a  class="add btn btn-success"  href="add_item.php" >New </a>
+             <a  class="new btn btn-success"  href="add_item.php" >New </a>
               
                 <table class="table table-bordered ">
                     <thead>
@@ -35,6 +35,7 @@
                     <tbody>
                         <?php
                         include 'php/database.php';
+                        include"php/add.php";
                         $result  = $conn->query("SELECT * FROM equipment;");
                         while($row = mysqli_fetch_array($result) ) {
                             echo "<tr>";

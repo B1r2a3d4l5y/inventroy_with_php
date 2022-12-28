@@ -12,11 +12,10 @@ body {
 
 }
 
-.add {
-    display: inline-block;
-    position: relative;
-    margin: 45px;
-    left: 150px ;
+.new {
+   display: inline-block;
+   position: relative;
+   width: 100px;
 }
 
 
